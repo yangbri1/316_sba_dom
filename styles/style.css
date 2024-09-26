@@ -1,36 +1,45 @@
 /* given from skeleton code in Code Sandbox -- 316.2 BOM lab *temp demo**/
 /* NOTE: Do NOT use this until after finishing up the BOM -- as the DOM manipulation would
 NOT work if the BOM window.prompt() wouldn't be finished */
+
 body {
-    background: #f5f5f4;
-    color: #232323;
-    line-height: 30px;
-    font-size: 20px;
-    font-family: sans-serif;
-    padding: 25px 50px;
+  background: #851414;
+  color: #232323;
+  line-height: 30px;
+  font-size: 20px;
+  font-family: sans-serif;
+  padding: 25px 50px;
+}
+
+code {
+  color: #09507c;
+  background: #deedf2;
+  padding: 2px 10px;
+  border-radius: 10px;
+}
+
+td {
+  border: 1px solid black;
+  padding: 15px;
+}
+
+button {
+  font-size: 20px;
+  padding: 5px 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+}
+button:hover {
+  border-color: #09507c;
+  background-color: #deedf2;
+}
+
+
+/* accomodate for different different viewing */
+/* changes width to 100% view when the viewport is 426px or smaller (mobile[large]) */
+@media screen and (max-width: 426px){
+    body{
+        width: 100%; 
     }
-    
-    code {
-    color: #09507c;
-    background: #deedf2;
-    padding: 2px 10px;
-    border-radius: 10px;
-    }
-    
-    td {
-    border: 1px solid black;
-    padding: 15px;
-    }
-    
-    button {
-    font-size: 20px;
-    padding: 5px 10px;
-    border: 1px solid black;
-    border-radius: 5px;
-    cursor: pointer;
-    }
-    button:hover {
-    border-color: #09507c;
-    background-color: #deedf2;
-    }
-          
+}
