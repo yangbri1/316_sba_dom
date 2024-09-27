@@ -9,8 +9,25 @@
     <title>s🅱️innala</title>
 </head>
 <body>
-    <h1>Hint Hint</h1>
-    <ul><h2><em>Formula 1 Teams</em></h2>
+    <!-- <input type="text" id="username" placeholder="Your name please"> -->
+    <h1 id="child1"></h1>
+    <h1>Click a button to change the background color</h1>
+    <button onclick="changeBackgroundColor('#FF8700')">McLaren</button>
+    <button onclick="changeBackgroundColor('lime')">Lime</button>
+    <button onclick="changeBackgroundColor('orange')">Orange</button>
+
+    <!-- <input type="text" id="commentInput" /> -->
+    <!-- <button id="addCommentBtn">Add Comment</button> -->
+    <h3>Comments</h3>
+    <!-- <ul id="commentList">
+      <li>Testing Events!</li>
+    </ul> -->
+
+    <input type="text" id="commentInput" />
+    <button id="addCommentBtn">Add Comment</button>
+    <h1>Formula 1</h1>
+    <p><strong>Hint:</strong> Hover for a clue</p>
+    <ul id="commentList">
         <!-- <li>Red Bull</li>
         <li>Mercedes</li>
         <li>Ferrari</li> -->
@@ -25,14 +42,17 @@
             <!-- regex pattern indicates the string must start w/ '#' followed by exactly 6 alphanumeric characters -->
             <input type="text" placeholder="#rrggbb" title="Please enter 6 digit/letter color code"
             minlength="7" maxlength="7" pattern="^#[a-zA-Z0-9]{6}" required /> 
-            <input type="submit"  value="🔍">
+            <button onclick="changeBackgroundColor('#FF8700')">McLaren</button>
+            <!-- <input type="submit"  value="🔍"> -->
         </form>
         <br/>
         <h5></h5>
     </div>
     
+    <h2>Check</h2>
     <!-- brand block -->
     <div class="brand">
+        <!-- form action usually redirects you to another URL -->
         <form action="">
             <!-- <label> tags added for accessibility -->
             <input type="checkbox" name="mclaren" id="mclaren" title="mclaren">
@@ -72,7 +92,7 @@
 
     <div>
         <!-- form action usually redirects you to another URL -->
-        <form action="" id="colorInput">
+        <!-- <form action="" id="colorInput">
 
             <input type="text" placeholder="Username" title="Please enter your username" 
             minlength="5" maxlength="9" pattern="^[a-zA-Z]*$" required />
@@ -81,8 +101,8 @@
             minlength="5" maxlength="9" required />
             <br/>
             <input type="submit" value="Log in">
-            <!-- <button id="btn-id" style="" -->
-        </form>
+            <button id="btn-id" style=""></button>
+        </form> -->
     </div>
 
     
