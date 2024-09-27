@@ -9,12 +9,104 @@
     <title>s🅱️innala</title>
 </head>
 <body>
-    <h1>s🅱️innala</h1>
-    <ul><em>Reasons</em>
-        <li>Funding gone</li>
-        <li>Fans left</li>
-        <li>Lawsuits</li>
+    <h1>Formula 1 Teams</h1>
+    <ul><em>Constructor Standings</em>
+        <!-- <li>Red Bull</li>
+        <li>Mercedes</li>
+        <li>Ferrari</li> -->
     </ul>
     <p>Disclaimer: Lorem ipsum dolor sit amet.</p>
+    
+    <div class="hexa-color" id="hexa-color">
+        <h2>Guess the background color <br/></h2>
+        <!-- <h4>Please enter a color in hexadecimal format:</h4> -->
+        <form action="" >
+            <label for="hexacolor"></label>
+            <!-- regex pattern indicates the string must start w/ '#' followed by exactly 6 alphanumeric characters -->
+            <input type="text" placeholder="#rrggbb" title="Please enter 6 digit/letter color code"
+            minlength="7" maxlength="7" pattern="^#[a-zA-Z0-9]{6}" required /> 
+            <input type="submit"  value="🔍">
+        </form>
+        <br/>
+        <li></li>
+    </div>
+    
+    <!-- brand block -->
+    <div class="brand">
+        <form action="">
+            <!-- <label> tags added for accessibility -->
+            <input type="checkbox" name="mclaren" id="mclaren" title="mclaren">
+            <label for="mclaren" title="orange bull">McLaren Orange</label>
+            <br/>
+            <input type="checkbox" name="redbull" id="redbull">
+            <label for="redbull" title="toro bosso">Red Bull Blue</label>
+            <br/>
+            <input type="checkbox" name="ferrari" id="ferarri">
+            <label for="ferrari" title="s🅱️innala">Ferrari Rosso</label>
+            <br/>
+            <input type="checkbox" name="mercedes" id="mercedes">
+            <label for="mercedes" title="silver arrows">Mercedes Silver</label>
+            <br/>
+            <input type="checkbox" name="astonmartin" id="astonmartin">
+            <label for="astonmartin" title="green bull">Aston Green</label>
+            <br/>
+            <input type="checkbox" name="honda" id="honda">
+            <label for="honda" title="flip flops">Honda Red</label>
+            <br/>
+            <input type="checkbox" name="haas" id="haas">
+            <label for="haas" title="what's a km">Haas White</label>
+            <br/>
+            <input type="checkbox" name="williams" id="williams">
+            <label for="williams" title="legacy">Williams Navy</label>
+            <br/>
+            <input type="checkbox" name="renault" id="renault">
+            <label for="renault" title="huh?">Renault Yellow</label>
+            <br/>
+            <input type="checkbox" name="kicksauber" id="kicksauber">
+            <label for="kicksauber" title="tractor">Kick Green</label>
+            
+
+        </form>
+    </div>
+
+
+    <div>
+        <!-- form action usually redirects you to another URL -->
+        <form action="" id="colorInput">
+
+            <input type="text" placeholder="Username" title="Please enter your username" 
+            minlength="5" maxlength="9" pattern="^[a-zA-Z]*$" required />
+            <br/>
+            <input type="password" placeholder="Password" title="Please enter your password"
+            minlength="5" maxlength="9" required />
+            <br/>
+            <input type="submit" value="Log in">
+            <!-- <button id="btn-id" style="" -->
+        </form>
+    </div>
+
+    
+
+    <!-- inline styling for the line  -->
+    <hr style="border: 2px solid rgb(193, 200, 207)">
+
+    <!-- social media links, trademarks, affiliations, etc. -->
+    <div>
+        <footer>
+            <nav aria-label="primary"></nav>
+            <a href="https://www.facebook.com/" target="_blank" title="Facebook"> 
+            <img src="./images/icons8-facebook-50.png" alt="facebook"></a> 
+            <a href="https://www.twitter.com/" target="_blank" title="Twitter"> 
+            <img src="./images/icons8-twitter-50.png" alt="twitter"></a>
+            <a href="https://www.gmail.com/" target="_blank" title="Gmail"> 
+            <img src="./images/icons8-gmail-50.png" alt="gmail"></a>
+            <a href="https://www.wechat.com/" target="_blank" title="Wehat"> 
+            <img src="./images/icons8-wechat-50.png" alt="wechat"></a>
+            <a href="https://www.qq.com/" target="_blank" title="QQ"> 
+            <img src="./images/icons8-qq-50.png" alt="qq"></a>
+            <p>This website is neither endorsed nor affiliated by any means to any country or third party entities.</p>
+        </footer>
+    </div>
+    
 </body>
 </html>

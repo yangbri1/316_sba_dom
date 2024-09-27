@@ -3,11 +3,11 @@
 NOT work if the BOM window.prompt() wouldn't be finished */
 
 body {
-  background: #851414;
+  background: #aa1717;
   color: #232323;
   line-height: 30px;
   font-size: 20px;
-  font-family: sans-serif;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   padding: 25px 50px;
 }
 
@@ -30,11 +30,42 @@ button {
   border-radius: 5px;
   cursor: pointer;
 }
+
 button:hover {
   border-color: #09507c;
   background-color: #deedf2;
 }
 
+.hexa-color{
+    /* display: flex;
+    justify-content: center; */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    width:60%;
+    margin-left:20%;
+    padding-top: 10px;
+    /* padding-right: auto; */
+}
+.brand{
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    width: 60%;
+    margin: 0.5rem;
+    
+}
+  
+/* .brand */
+footer{
+    display:flex;
+    
+    
+}
+footer > p{
+    text-align:right;
+    font-size:medium;
+    margin-left:auto;
+}
 
 /* accomodate for different different viewing */
 /* changes width to 100% view when the viewport is 426px or smaller (mobile[large]) */
@@ -43,3 +74,4 @@ button:hover {
         width: 100%; 
     }
 }
+
