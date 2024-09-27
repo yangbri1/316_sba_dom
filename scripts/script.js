@@ -75,17 +75,26 @@ guess_color.style.backgroundColor = random_color;
 //     guess_color.style.color = 'white';
 // }
 
-
-guess_color.addEventListener("onclick", function(event){
+// add an event listener to guess_color w/ a nameless function
+guess_color.addEventListener("input", function(event){
+    // halt any default behavior from happening
+    // event.preventDefault();
+    // declared clicked interaction
     let clicked = event.target;
+    // check to see if user input matches the color correctly
     if(clicked.value !== random_color){
+        // otherwise change the color of the box to the user inputted hexa code
         guess_color.style.backgroundColor = clicked.value;
-        const guessed_li = document.createElement("li");
-        guess_color.li.textContent = `This is the color you've inserted`;
+        // const guessed_li = document.createElement("li");
+        // guessed_li.textContent = `This is the color you've inserted`;
+        // guess_color.appendChild(guessed_li);
+        
+        
+        // brands.push(clicked_value);
     }
 })
-
-
+// let new_name = window.prompt(`Name your customized color`);
+// brands.push(new_name);
 // create a new document fragment using the DocumentFragment constructor
 let fragment = document.createDocumentFragment();
 
