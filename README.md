@@ -1,5 +1,6 @@
 # Project Name
 ### Skill Based Assessment #3 --- <em> The Document Object Model </em>
+
 - - - - 
 
 ## Project Description
@@ -9,6 +10,7 @@
 #### 2. In addition, use BOM properties, methods, and techniques to facilatate creation of a dynamic web application. (BOM must be passed before DOM could do anything)
 #### 3. Show proficiency with event-driven-programming and DOM events.
 #### 4. Include form validations using any combination of built-in HTML validation attributes and DOM-event-driven JavaScript validations (ex. required)
+
 - - - -
 
 ## Technologies used
@@ -43,6 +45,7 @@
 ### All used materials are stored in the "reference" folder of this repo
 
 - - - -
+
 ### F1 standings
 #### https://www.formula1.com/en/results/2024/team
 
@@ -67,6 +70,7 @@
 #### https://www.canva.com/design/DAFrinVIJsw/view#1
 
 - - - -
+
 > <em> First opening up the web application would yield an alert telling the user that they're low on storage (attempting to impersonate a real popup). Afterwards a windows.prompt() will go underway requesting the user to input "I Agree" to continue forward from the BOM to the DOM. Under the impression that the user does NOT agree, another prompt would come up showing a random number of attempts (ranging from 1-10) left for the user to input "I Agree". If the given number of tries are insufficient, an alert would popup timing out the user and window.close() out of the web application. 
 
 > When the user finally agrees to proceed, they would be inquired about their name. Upon doing so, the BOM stage is finally done and onward we go to the DOM. The document would be updated with user's given name welcoming them on top (innerHTML changed). The website's background color would dynamically change to reflect the number of tries out of 10 taken to access the DOM (index of color array = attempts left). Also, the number of list items being dynamically populated is related to the user's attempts left during the BOM era (iterate via the array of brands only up to the number of attempts left). 
