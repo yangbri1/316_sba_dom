@@ -36,6 +36,10 @@ button:hover {
   background-color: #deedf2;
 }
 
+#child1{
+    display:flex;
+    justify-content: center;
+}
 .hexa-color{
     /* display: flex;
     justify-content: center; */
@@ -54,11 +58,21 @@ button:hover {
     margin: 0.5rem;
     
 }
-  
-/* .brand */
-/* .theme-change{
-    background:
+
+#final-submit{
+    display:flex;
+    justify-content: space-between;
+    text-align: justify;
+}
+
+/* #final-submit inputp[type="text"]:focus{
+    margin-right:10px;
 } */
+  
+.submit-color{
+    background-color:cornflowerblue;
+}
+
 footer{
     display:flex;
     

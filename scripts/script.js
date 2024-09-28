@@ -64,20 +64,26 @@ if(tries === limit){
 //     document.getElementById('child1').innerHTML = actual_name;
 // });
 
-let brands_check = document.querySelector('input[type=checkbox');
+// let brands_check = document.querySelector('input[type=checkbox');
 // brands_check.addEventListener
 const ul = document.querySelector("ul");
-const brands = ["McLaren", "Red Bull", "Ferrari", "Mercedes", "Aston Martin", "Honda", "Haas", "Williams", "Renault", "Kick Sauber"];
-const colors = ['#FF8700', '#FF0C49', '#FF2800', '#A4AAAE', '#037A68', '#CC0000', '#F5FEFD','#00A3E0', '#FFE135', '#76FF7A'];
+// arrays of car brands and their respective colors in hexadecimal code
+let brands = ["McLaren", "Red Bull", "Ferrari", "Mercedes", "Aston Martin", "Honda", "Haas", "Williams", "Renault", "Kick Sauber"];
+let colors = ['#FF8700', '#FF0C49', '#FF2800', '#A4AAAE', '#037A68', '#CC0000', '#F5FEFD','#00A3E0', '#FFE135', '#76FF7A'];
 
-// dynamically changes the background color of the DOM depending on user's attempts
+/*------------------------------ Guess the background color block ----------------------------- */
+
+// arrays of car and brands w/ their length reflected by the number of tries
+let brands_new = brands.slice(0, limit-tries+1);
+let colors_new = colors.slice(0, limit-tries+1);
+
+// dynamically changes the background color of the DOM depending on number of user's attempts
 // applying inline styling (precedes over internal & exteral)
 document.body.style.backgroundColor = colors[tries];
 
 // retrieve the element w/ the specified id from the DOM document & assign it to a variable
 let guess_color = document.getElementById('hexa-color');
 // let guess_color = document.getElementsByTagName('body');
-
 
 // assign randomly generate a number b/t 0-9 to random_number variable
 let random_number = Math.floor(Math.random() * 10);
@@ -108,79 +114,62 @@ guess_color.addEventListener('input', function(event){
         // guessed_li.textContent = `This is the color you've inserted`;
         // guess_color.appendChild(guessed_li);
         
-        
         // brands.push(clicked_value);
     }
 })
-// let new_name = window.prompt(`Name your customized color`);
-// brands.push(new_name);
+
+/*------------------------------ Formula One Hint Block ----------------------------- */
 // create a new document fragment using the DocumentFragment constructor
 let fragment = document.createDocumentFragment();
 // declare a counter to iterate via colors array
 let color_count = 0;
 // iterate through the array of brands above
-for(const brand of brands){
+for(const brand of brands_new){
     //dynamically create the list item elements
     const li = document.createElement("li");
     // change the text of the list items to the corresponding brand name
     li.textContent = brand;
-    // give a title attribute to each list items
+    // give a title attribute corresponding to each elements' name
     li.setAttribute('title', `${colors[color_count]}`);
-    // increment color_count by 1
+    // increment color_count by 1 
     color_count++;
     // append to declared fragment above
     // *Note: .append() method can append multiple nodes or strings at once, .appendChild() only one node
     fragment.appendChild(li);
 }
-
 // add the list items to the unordered list block
 ul.appendChild(fragment);
 
-// const pass = document.querySelector('input[type="password"]');
-let login = document.getElementById('login');
-// let form = document.getElementsByTagName('form');
-
 // add an event listener to form at index 0 as .getElementsByTagName() method 
 // returns an array-like container
-form[0].addEventListener('submit', (event)=>{
-    // halt default behavior --- like refresh
-    event.preventDefault();
+// retrieves all instance where the input type is of "text" 
+const textbox = document.querySelectorAll('input[type="text"]');
+// halt default behavior --- like refresh
+// event.preventDefault();
 
-})
-
-login.addEventListener('focus', (e) => {
-    e.target.style.backgroundColor = '#f3edc8';
+// add an event listener to textbox
+textbox[0].addEventListener('focus', (event) => {
+    // change the background color of it to pink when "focus" on
+    event.target.style.backgroundColor = 'pink';
+    // final_textbox.classList.add('final-submit');
 });
+
+// textbox[0].addEventListener('blur', (event) => {
+//     e.target.style.backgroundColor = '';
+// });
+
 
 // login.addEventListener('blur', (e) => {
 //     e.target.style.backgroundColor = '#f3edc8';
 // });
 
-// Caching DOM Elements
-const cList = document.getElementById("commentList");
-const cInput = document.getElementById("commentInput");
-const cBtn = document.getElementById("addCommentBtn");
-
-// The function to handle adding new comments.
-function addComment() {
-  const newComment = cInput.value;
-
-  // This wasn't in the instructions, but
-  // we added a guard against empty comments:
-  if (newComment === "") return;
-
-  cList.appendChild(document.createElement("li")).textContent = newComment;
-  cInput.value = "";
-  cInput.focus();
+// activate this when the correct color is found
+// function to remove everything from the visible body on a webpage
+function eraseAll(){
+    // iterate through every element in the body
+    while(document.body.firstChild) {
+        // remove every element
+        document.body.removeChild(document.body.firstChild);
+    }
 }
 
-// Register the event listener.
-cBtn.addEventListener("click", addComment);
-
-function changeBackgroundColor(color) {
-    document.body.style.backgroundColor = color;
-}
-
-while(document.body.firstChild) {
-    document.body.removeChild(document.body.firstChild);
-}

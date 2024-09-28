@@ -11,46 +11,49 @@
 <body>
     <!-- <input type="text" id="username" placeholder="Your name please"> -->
     <h1 id="child1"></h1>
-    <h1>Click a button to change the background color</h1>
+    <!-- <h1>Click a button to change the background color</h1>
     <button onclick="changeBackgroundColor('#FF8700')">McLaren</button>
     <button onclick="changeBackgroundColor('lime')">Lime</button>
-    <button onclick="changeBackgroundColor('orange')">Orange</button>
+    <button onclick="changeBackgroundColor('orange')">Orange</button> -->
 
     <!-- <input type="text" id="commentInput" /> -->
     <!-- <button id="addCommentBtn">Add Comment</button> -->
-    <h3>Comments</h3>
+    <!-- <h3>Comments</h3> -->
     <!-- <ul id="commentList">
       <li>Testing Events!</li>
     </ul> -->
-
-    <input type="text" id="commentInput" />
-    <button id="addCommentBtn">Add Comment</button>
+    <!-- -----------------------------------Hints to User Section-------------------- -->
+    <!-- <input type="text" id="commentInput" />
+    <button id="addCommentBtn">Add Comment</button> -->
     <h1>Formula 1</h1>
+    <p><strong>Note:</strong> Number of teams given is equivalent to number of attempts left to access DOM</p>
     <p><strong>Hint:</strong> Hover for a clue</p>
-    <ul id="commentList">
+    <!-- the list items will dynamically populate here depending on remaining attempts -->
+    <ul id="brands">
         <!-- <li>Red Bull</li>
         <li>Mercedes</li>
         <li>Ferrari</li> -->
     </ul>
-    <p><strong>Notice: The color of the box will change dynamically to your input</strong></p>
     
+    <!--------------------------------- Guess the background color section  ---------->
+    <p><strong>Notice: Match the color of the box to the  background</strong></p>
     <div class="hexa-color" id="hexa-color">
         <h2>Guess the background color <br/></h2>
         <!-- <h4>Please enter a color in hexadecimal format:</h4> -->
         <form action="">
             <label for="hexacolor"></label>
             <!-- regex pattern indicates the string must start w/ '#' followed by exactly 6 alphanumeric characters -->
-            <input type="text" placeholder="#rrggbb" title="Please enter 6 digit/letter color code"
+            <input type="text" id="hexcode-input" style="height: 30px"placeholder="#rrggbb" title="Please enter 6 digit/letter color code"
             minlength="7" maxlength="7" pattern="^#[a-zA-Z0-9]{6}" required /> 
-            <button onclick="changeBackgroundColor('#FF8700')">McLaren</button>
+            <button id="change-color" >🔍</button>
             <!-- <input type="submit"  value="🔍"> -->
         </form>
         <br/>
         <h5></h5>
     </div>
     
-    <h2>Check</h2>
-    <!-- brand block -->
+    <!------ Checklist block for user to keep track of what colors they had tried ------>
+    <h2>Checklst</h2>
     <div class="brand">
         <!-- form action usually redirects you to another URL -->
         <form action="">
@@ -89,20 +92,21 @@
         </form>
     </div>
 
-
-    <div>
+    <!------------------------------- bottom submit button -------------------- -->
+    <div id="final-submit">
+        <h2>Guess the color</h2>
         <!-- form action usually redirects you to another URL -->
-        <!-- <form action="" id="colorInput">
+        <form action="" id="colorInput">
 
-            <input type="text" placeholder="Username" title="Please enter your username" 
-            minlength="5" maxlength="9" pattern="^[a-zA-Z]*$" required />
+            <input type="text" style="height: 30px" placeholder="Input Color: #rrggbb" title="Enter the color" 
+            minlength="7" maxlength="7" pattern="^#[a-zA-Z0-9]{6}" required />
             <br/>
-            <input type="password" placeholder="Password" title="Please enter your password"
+            <!-- <input type="password" placeholder="Password" title="Please enter your password"
             minlength="5" maxlength="9" required />
-            <br/>
-            <input type="submit" value="Log in">
-            <button id="btn-id" style=""></button>
-        </form> -->
+            <br/> -->
+            <!-- <input type="submit" value="Log in"> -->
+            <button id="submit-color">Submit Color</button>
+        </form>
     </div>
 
     
